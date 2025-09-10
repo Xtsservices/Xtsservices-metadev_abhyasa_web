@@ -326,7 +326,7 @@ export default function App() {
   const getInstitutionName = () => {
     switch (userRole) {
       case 'super_admin':
-        return 'Abhyasa System';
+        return 'Abhyasa';
       case 'institution_admin':
         return 'Modern Public School';
       case 'teacher':
@@ -336,7 +336,7 @@ export default function App() {
       case 'parent':
         return 'Modern Public School';
       default:
-        return 'Abhyasa System';
+        return 'Abhyasa';
     }
   };
 

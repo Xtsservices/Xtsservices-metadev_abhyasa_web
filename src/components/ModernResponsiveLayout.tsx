@@ -38,14 +38,14 @@ export function ModernResponsiveLayout({
   const getInstitutionName = () => {
     switch (userRole) {
       case 'super_admin':
-        return 'Abhyasa System';
+        return 'Abhyasa';
       case 'institution_admin':
       case 'teacher':
       case 'student':
       case 'parent':
         return 'Modern Public School';
       default:
-        return 'Abhyasa System';
+        return 'Abhyasa';
     }
   };
 

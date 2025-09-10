@@ -36,7 +36,7 @@ interface RoleBasedSidebarProps {
 
 const roleConfigs = {
   super_admin: {
-    title: 'Super Admin Portal',
+  title: <span style={{ fontFamily: "'Lexend Deca', sans-serif" }}>Super Admin Portal</span>,
     menuItems: [
       { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
       { id: 'master-data', label: 'Master Data', icon: Database },
@@ -121,7 +121,8 @@ export function RoleBasedSidebar({
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-                variant={isActive ? "default" : "ghost"}
+                type="button"
+                variant={isActive ? "default" : "secondary"}
                 className={`w-full h-10 p-0 justify-center relative ${
                   isActive 
                     ? "bg-sidebar-primary text-sidebar-primary-foreground" 
@@ -156,7 +157,7 @@ export function RoleBasedSidebar({
     return (
       <Button
         key={item.id}
-        variant={isActive ? "default" : "ghost"}
+        variant={isActive ? "default" : "secondary"}
         className={`w-full justify-start h-10 ${
           isActive 
             ? "bg-sidebar-primary text-sidebar-primary-foreground" 
@@ -195,7 +196,7 @@ export function RoleBasedSidebar({
 
         {onToggleCollapse && (
           <Button
-            variant="ghost"
+            variant="secondary"
             size="sm"
             className={`h-8 w-8 p-0 text-sidebar-foreground hover:bg-sidebar-accent ${
               isCollapsed ? '' : 'ml-auto'
@@ -227,7 +228,7 @@ export function RoleBasedSidebar({
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
-                  variant="ghost"
+                  variant="secondary"
                   className="w-full h-10 p-0 justify-center text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                   onClick={onLogout}
                 >
@@ -241,7 +242,7 @@ export function RoleBasedSidebar({
           </TooltipProvider>
         ) : (
           <Button
-            variant="ghost"
+            variant="secondary"
             className="w-full justify-start text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
             onClick={onLogout}
           >

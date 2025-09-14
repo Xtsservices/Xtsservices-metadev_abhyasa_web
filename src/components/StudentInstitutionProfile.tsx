@@ -39,7 +39,7 @@ import {
 } from 'lucide-react';
 
 interface StudentInstitutionProfileProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function StudentInstitutionProfile({ onNavigate }: StudentInstitutionProfileProps) {

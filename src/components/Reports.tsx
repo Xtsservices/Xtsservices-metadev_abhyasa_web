@@ -16,7 +16,7 @@ import {
   TableRow 
 } from "./ui/table";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "./ui/dialog";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 import { 
   ArrowLeft, 
   Download, 
@@ -36,7 +36,7 @@ import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, Cart
 // Removed date-fns import to avoid dependency issues
 
 interface ReportsProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function Reports({ onNavigate }: ReportsProps) {

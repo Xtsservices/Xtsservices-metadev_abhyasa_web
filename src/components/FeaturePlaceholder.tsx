@@ -20,7 +20,7 @@ import {
 interface FeaturePlaceholderProps {
   featureType: string;
   userRole: string;
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 const featureConfig = {

@@ -24,7 +24,7 @@ import {
 import { toast } from "sonner";
 
 interface TeacherAttendanceProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface Student {

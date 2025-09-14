@@ -53,8 +53,8 @@ import { MobileStudentDashboard } from './components/MobileStudentDashboard';
 import { MobileParentDashboard } from './components/MobileParentDashboard';
 import { MobileStudentAssignments } from './components/MobileStudentAssignments';
 
-type UserRole = 'super_admin' | 'institution_admin' | 'teacher' | 'student' | 'parent';
-type Screen = 'login' | 'dashboard' | 'master-data' | 'requests' | 'profile' | 'reports' | 'settings' | 
+export type UserRole = 'super_admin' | 'institution_admin' | 'teacher' | 'student' | 'parent';
+export type Screen = 'login' | 'dashboard' | 'master-data' | 'requests' | 'profile' | 'reports' | 'settings' | 
              'total-institutes' | 'notifications' | 'onboarding' | 'onboarding-landing' | 'teacher-onboarding' | 'student-onboarding' | 'students' | 'teachers' | 'classes' | 'assignments' | 'gradebook' | 'attendance' | 
              'messages' | 'calendar' | 'schedule' | 'schedule-summary' | 'grades' | 'library' | 'announcements' | 'children' | 
              'academic' | 'communication' | 'events' | 'child-certificates' | 'leave-application' | 'certificates' | 

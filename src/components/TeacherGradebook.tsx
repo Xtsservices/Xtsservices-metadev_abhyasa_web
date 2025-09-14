@@ -24,7 +24,7 @@ import {
 import { toast } from "sonner";
 
 interface TeacherGradebookProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface StudentGrade {

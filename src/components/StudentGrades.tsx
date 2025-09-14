@@ -23,7 +23,7 @@ import {
 } from 'lucide-react';
 
 interface StudentGradesProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface Grade {

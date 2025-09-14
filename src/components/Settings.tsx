@@ -6,7 +6,7 @@ import { Label } from "./ui/label";
 import { Separator } from "./ui/separator";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "./ui/dialog";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "./ui/alert-dialog";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 import { 
   ArrowLeft, 
   User, 
@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 
 interface SettingsProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
   onLogout: () => void;
 }
 

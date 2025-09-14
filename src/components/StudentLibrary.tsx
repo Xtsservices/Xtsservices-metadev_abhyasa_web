@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 
 interface StudentLibraryProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface LibraryResource {

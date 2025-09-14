@@ -22,7 +22,7 @@ import {
 } from 'lucide-react';
 
 interface ParentAcademicReportsProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function ParentAcademicReports({ onNavigate }: ParentAcademicReportsProps) {

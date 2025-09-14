@@ -20,7 +20,7 @@ import {
 import { toast } from "sonner";
 
 interface TeacherLeaveApplicationProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface LeaveApplication {

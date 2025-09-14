@@ -18,7 +18,7 @@ interface ModernResponsiveLayoutProps {
   currentScreen: string;
   userData: any;
   isSidebarCollapsed: boolean;
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
   onLogout: () => void;
   onToggleCollapse: () => void;
 }
@@ -70,14 +70,14 @@ export function ModernResponsiveLayout({
           <ParentHomeScreen onNavigate={onNavigate} />;
       
       case 'search':
-        return <SearchScreen userRole={userRole} onNavigate={onNavigate} />;
+        return <SearchScreen userRole={userRole as 'student' | 'parent'} onNavigate={onNavigate} />;
       
       case 'activity':
-        return <ActivityScreen userRole={userRole} onNavigate={onNavigate} />;
+        return <ActivityScreen userRole={userRole as 'student' | 'parent'} onNavigate={onNavigate} />;
       
       case 'student-profile':
       case 'parent-profile':
-        return <ProfileScreen userRole={userRole} onNavigate={onNavigate} onLogout={onLogout} />;
+        return <ProfileScreen userRole={userRole as 'student' | 'parent'} onNavigate={onNavigate} onLogout={onLogout} />;
       
       // For other screens, render the children (existing components)
       default:

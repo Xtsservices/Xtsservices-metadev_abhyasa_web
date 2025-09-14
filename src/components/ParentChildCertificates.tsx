@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 
 interface ParentChildCertificatesProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface Certificate {

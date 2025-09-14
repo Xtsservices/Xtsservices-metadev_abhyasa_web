@@ -18,7 +18,7 @@ import {
 import { toast } from "sonner";
 
 interface StudentScheduleProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface ScheduleItem {

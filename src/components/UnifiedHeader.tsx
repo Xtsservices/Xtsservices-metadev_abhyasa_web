@@ -12,9 +12,10 @@ interface UnifiedHeaderProps {
   userName: string;
   userEmail: string;
   institutionName?: string;
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: Screen) => void;
   onLogout: () => void;
 }
+import type { Screen } from '../App';
 
 export function UnifiedHeader({ 
   userRole, 
@@ -163,12 +164,12 @@ export function UnifiedHeader({
                     profileScreen = 'parent-profile';
                     break;
                 }
-                onNavigate(profileScreen);
+                onNavigate(profileScreen as Screen);
               }}>
                 <User className="mr-2 h-4 w-4" />
                 Profile
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => onNavigate('settings')}>
+              <DropdownMenuItem onClick={() => onNavigate('settings' as Screen)}>
                 <Settings className="mr-2 h-4 w-4" />
                 Settings
               </DropdownMenuItem>

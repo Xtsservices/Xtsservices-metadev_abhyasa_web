@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 
 interface ParentHomeScreenProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../../App").Screen) => void;
 }
 
 export function ParentHomeScreen({ onNavigate }: ParentHomeScreenProps) {
@@ -282,10 +282,10 @@ export function ParentHomeScreen({ onNavigate }: ParentHomeScreenProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, delay: 0.7 }}
       >
-        {[
+        {([
           { icon: TrendingUp, label: 'Reports', screen: 'academic', color: 'bg-blue-50 text-blue-600' },
           { icon: Award, label: 'Certificates', screen: 'child-certificates', color: 'bg-emerald-50 text-emerald-600' }
-        ].map((action, index) => {
+        ] as { icon: any; label: string; screen: import("../../App").Screen; color: string }[]).map((action, index) => {
           const Icon = action.icon;
           return (
             <motion.div

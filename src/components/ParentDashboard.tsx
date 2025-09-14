@@ -8,7 +8,7 @@ import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, Cart
 import { Users, Calendar, TrendingUp, MessageSquare, BookOpen, Award, Bell } from 'lucide-react';
 
 interface ParentDashboardProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function ParentDashboard({ onNavigate }: ParentDashboardProps) {

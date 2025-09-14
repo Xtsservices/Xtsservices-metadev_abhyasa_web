@@ -23,13 +23,26 @@ import {
 
 interface ActivityScreenProps {
   userRole: 'student' | 'parent';
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../../App").Screen) => void;
 }
+
+type Activity = {
+  id: number;
+  type: string;
+  title: string;
+  description: string;
+  time: string;
+  icon: any;
+  priority: string;
+  read: boolean;
+  color: string;
+  child?: string;
+};
 
 export function ActivityScreen({ userRole, onNavigate }: ActivityScreenProps) {
   const [selectedTab, setSelectedTab] = useState('all');
 
-  const studentActivities = {
+  const studentActivities: { all: Activity[] } = {
     all: [
       {
         id: 1,
@@ -78,7 +91,7 @@ export function ActivityScreen({ userRole, onNavigate }: ActivityScreenProps) {
     ]
   };
 
-  const parentActivities = {
+  const parentActivities: { all: Activity[] } = {
     all: [
       {
         id: 1,
@@ -235,7 +248,7 @@ export function ActivityScreen({ userRole, onNavigate }: ActivityScreenProps) {
                             </span>
                           </div>
                           
-                          {userRole === 'parent' && 'child' in activity && (
+                          {userRole === 'parent' && typeof activity.child === 'string' && (
                             <Badge variant="outline" className="text-xs">
                               {activity.child}
                             </Badge>

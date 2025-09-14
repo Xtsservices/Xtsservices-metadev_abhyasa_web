@@ -38,12 +38,62 @@ import {
 import { toast } from "sonner";
 
 interface TeacherOnboardingProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function TeacherOnboarding({ onNavigate }: TeacherOnboardingProps) {
   const [currentStep, setCurrentStep] = useState(1);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    // Personal Information
+    fullName: string;
+    email: string;
+    mobile: string;
+    alternateContact: string;
+    dateOfBirth: string;
+    gender: string;
+    nationality: string;
+    maritalStatus: string;
+    aadhaarNumber: string;
+    panNumber: string;
+    passportNumber: string;
+    voterIdNumber: string;
+    drivingLicense: string;
+    permanentAddress: string;
+    currentAddress: string;
+    city: string;
+    state: string;
+    pincode: string;
+    highestDegree: string;
+    university: string;
+    graduationYear: string;
+    cgpa: string;
+    specialization: string;
+    additionalQualifications: string;
+    tetCertificate: string;
+    ctetCertificate: string;
+    netSetCertificate: string;
+    otherCertifications: string;
+    previousEmployer: string;
+    designation: string;
+    experienceYears: string;
+    currentSalary: string;
+    noticePeriod: string;
+    reasonForLeaving: string;
+    bankName: string;
+    accountNumber: string;
+    ifscCode: string;
+    accountHolderName: string;
+    emergencyContactName: string;
+    emergencyContactRelation: string;
+    emergencyContactPhone: string;
+    subjectsToTeach: string[];
+    preferredClasses: string[];
+    teachingExperience: string;
+    backgroundCheckConsent: boolean;
+    dataPrivacyConsent: boolean;
+    codeOfConductConsent: boolean;
+    medicalFitnessConsent: boolean;
+  }>({
     // Personal Information
     fullName: '',
     email: '',

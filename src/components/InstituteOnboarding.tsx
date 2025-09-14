@@ -38,12 +38,76 @@ import {
 import { toast } from "sonner";
 
 interface InstituteOnboardingProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function InstituteOnboarding({ onNavigate }: InstituteOnboardingProps) {
   const [currentStep, setCurrentStep] = useState(1);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    // Basic Information
+    instituteName: string;
+    phone: string;
+    email: string;
+    alternatePhone: string;
+    alternateEmail: string;
+    otp: string;
+    institutionType: string;
+    registrationNumber: string;
+    panNumber: string;
+    gstNumber: string;
+    trustRegistrationNumber: string;
+    incorporationNumber: string;
+    completeAddress: string;
+    city: string;
+    state: string;
+    pincode: string;
+    district: string;
+    landmark: string;
+    website: string;
+    affiliatedBoard: string;
+    affiliationNumber: string;
+    recognitionNumber: string;
+    aicteApprovalNumber: string;
+    ugcRecognitionNumber: string;
+    naacGrade: string;
+    isoNumber: string;
+    yearEstablished: string;
+    landArea: string;
+    builtUpArea: string;
+    totalClassrooms: string;
+    laboratories: string;
+    library: string;
+    playground: string;
+    coursesOffered: string[];
+    mediumOfInstruction: string[];
+    boardsAffiliated: string[];
+    classesOffered: string[];
+    totalStudentCapacity: string;
+    currentStudentStrength: string;
+    totalTeachingStaff: string;
+    totalNonTeachingStaff: string;
+    signatoryName: string;
+    signatoryDesignation: string;
+    signatoryPhone: string;
+    signatoryEmail: string;
+    signatoryIdType: string;
+    signatoryIdNumber: string;
+    bankName: string;
+    branchName: string;
+    accountNumber: string;
+    ifscCode: string;
+    accountHolderName: string;
+    annualFeeCollection: string;
+    fireSafetyCertificateNumber: string;
+    buildingSafetyCertificateNumber: string;
+    healthCertificateNumber: string;
+    udiseCode: string;
+    aisheCode: string;
+    affiliationVerificationConsent: boolean;
+    physicalVerificationConsent: boolean;
+    dataPrivacyConsent: boolean;
+    termsConditionsConsent: boolean;
+  }>({
     // Basic Information
     instituteName: '',
     phone: '',

@@ -28,11 +28,12 @@ import {
 interface RoleBasedSidebarProps {
   userRole: 'super_admin' | 'institution_admin' | 'teacher' | 'student' | 'parent';
   currentScreen: string;
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: Screen) => void;
   onLogout: () => void;
   isCollapsed?: boolean;
   onToggleCollapse?: () => void;
 }
+import type { Screen } from '../App';
 
 const roleConfigs = {
   super_admin: {

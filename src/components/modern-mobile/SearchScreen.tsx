@@ -20,7 +20,7 @@ import {
 
 interface SearchScreenProps {
   userRole: 'student' | 'parent';
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../../App").Screen) => void;
 }
 
 export function SearchScreen({ userRole, onNavigate }: SearchScreenProps) {

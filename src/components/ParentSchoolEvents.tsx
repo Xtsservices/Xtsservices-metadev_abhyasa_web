@@ -8,7 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Calendar, MapPin, Clock, Users, Star, CheckCircle, XCircle, AlertCircle, Camera, Trophy, Music, BookOpen, Zap, Heart } from 'lucide-react';
 
 interface ParentSchoolEventsProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface SchoolEvent {

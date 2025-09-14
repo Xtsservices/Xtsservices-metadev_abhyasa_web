@@ -18,7 +18,7 @@ type UserRole = 'super_admin' | 'institution_admin' | 'teacher' | 'student' | 'p
 
 interface LoginScreenProps {
   onLogin: (userRole: UserRole, userData: any) => void;
-  onNavigate?: (screen: string) => void;
+  onNavigate?: (screen: import("../App").Screen) => void;
 }
 
 export function LoginScreen({ onLogin, onNavigate }: LoginScreenProps) {

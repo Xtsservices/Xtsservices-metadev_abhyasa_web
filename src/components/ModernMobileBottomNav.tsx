@@ -18,7 +18,7 @@ import {
 interface ModernMobileBottomNavProps {
   userRole: 'student' | 'parent';
   currentScreen: string;
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 const navigationConfigs = {
@@ -119,7 +119,7 @@ export function ModernMobileBottomNav({
                       ? `${item.activeBg} ${item.activeColor} shadow-sm` 
                       : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
                   }`}
-                  onClick={() => onNavigate(item.id)}
+                  onClick={() => onNavigate(item.id as import("../App").Screen)}
                 >
                   <motion.div 
                     className="relative nav-icon-scale"

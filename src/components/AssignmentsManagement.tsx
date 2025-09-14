@@ -28,7 +28,7 @@ import {
 import { toast } from "sonner";
 
 interface AssignmentsManagementProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface Assignment {

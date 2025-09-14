@@ -89,7 +89,7 @@ export function SidebarLayout({ children, currentScreen, onNavigate, onLogout }:
             </div>
             <div>
               <h2 className="text-lg font-semibold">EduAdmin</h2>
-              <p className="text-xs text-muted-foreground">Super Admin Panel</p>
+              <p className="text-xs text-muted-foreground" style={{ fontFamily: "'Lexend Deca', sans-serif" }}>Super Admin Panel</p>
             </div>
           </div>
         </SidebarHeader>
@@ -187,7 +187,7 @@ export function SidebarLayout({ children, currentScreen, onNavigate, onLogout }:
               </AvatarFallback>
             </Avatar>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium truncate">Super Admin</p>
+              <p className="text-sm font-medium truncate" style={{ fontFamily: "'Lexend Deca', sans-serif" }}>Super Admin</p>
               <p className="text-xs text-muted-foreground truncate">admin@system.com</p>
             </div>
           </div>

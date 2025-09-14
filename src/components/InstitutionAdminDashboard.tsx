@@ -9,7 +9,7 @@ import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, Cart
 import { Users, BookOpen, GraduationCap, Calendar, TrendingUp, Bell, FileText, Settings } from 'lucide-react';
 
 interface InstitutionAdminDashboardProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function InstitutionAdminDashboard({ onNavigate }: InstitutionAdminDashboardProps) {
@@ -92,10 +92,10 @@ export function InstitutionAdminDashboard({ onNavigate }: InstitutionAdminDashbo
             Notifications
             <Badge variant="destructive" className="ml-2">3</Badge>
           </Button>
-          <Button onClick={() => onNavigate('quick-actions')}>
+          {/* <Button onClick={() => onNavigate('quick-actions')}>
             <Settings className="h-4 w-4 mr-2" />
             Quick Actions
-          </Button>
+          </Button> */}
         </div>
       </div>
 

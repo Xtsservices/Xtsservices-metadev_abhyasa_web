@@ -28,7 +28,7 @@ import {
 
 interface ProfileScreenProps {
   userRole: 'student' | 'parent';
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../../App").Screen) => void;
   onLogout: () => void;
 }
 

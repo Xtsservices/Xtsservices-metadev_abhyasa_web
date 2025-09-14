@@ -10,7 +10,7 @@ interface ModernMobileHeaderProps {
   userName: string;
   userEmail: string;
   institutionName: string;
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
   onOpenDrawer: () => void;
 }
 
@@ -93,7 +93,7 @@ export function ModernMobileHeader({
               variant="ghost" 
               size="sm" 
               className="relative h-10 w-10 p-0 rounded-xl hover:bg-muted/50"
-              onClick={() => onNavigate('activity')}
+              onClick={() => onNavigate('announcements')}
             >
               <Bell className="h-5 w-5" />
               {notificationCount > 0 && (

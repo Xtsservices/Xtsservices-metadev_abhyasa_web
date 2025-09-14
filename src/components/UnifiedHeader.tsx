@@ -12,15 +12,16 @@ interface UnifiedHeaderProps {
   userName: string;
   userEmail: string;
   institutionName?: string;
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: Screen) => void;
   onLogout: () => void;
 }
+import type { Screen } from '../App';
 
 export function UnifiedHeader({ 
   userRole, 
   userName, 
   userEmail, 
-  institutionName = "Abhyasa System",
+  institutionName = "Abhyasa",
   onNavigate,
   onLogout 
 }: UnifiedHeaderProps) {
@@ -33,7 +34,7 @@ export function UnifiedHeader({
   const getRoleDisplayName = (role: string) => {
     switch (role) {
       case 'super_admin':
-        return 'Super Administrator';
+  return <span style={{ fontFamily: "'Lexend Deca', sans-serif" }}>Super Administrator</span>;
       case 'institution_admin':
         return 'Institution Admin';
       case 'teacher':
@@ -163,12 +164,12 @@ export function UnifiedHeader({
                     profileScreen = 'parent-profile';
                     break;
                 }
-                onNavigate(profileScreen);
+                onNavigate(profileScreen as Screen);
               }}>
                 <User className="mr-2 h-4 w-4" />
                 Profile
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => onNavigate('settings')}>
+              <DropdownMenuItem onClick={() => onNavigate('settings' as Screen)}>
                 <Settings className="mr-2 h-4 w-4" />
                 Settings
               </DropdownMenuItem>

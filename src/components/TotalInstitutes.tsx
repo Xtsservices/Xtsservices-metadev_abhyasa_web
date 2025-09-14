@@ -27,7 +27,7 @@ import {
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 
 interface TotalInstitutesProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
   onViewInstitute: (institute: any) => void;
 }
 

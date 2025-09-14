@@ -26,7 +26,7 @@ import {
 import { toast } from "sonner";
 
 interface ClassesManagementProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface ClassInfo {

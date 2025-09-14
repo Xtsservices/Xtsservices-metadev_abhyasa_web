@@ -21,7 +21,7 @@ import {
 
 interface OnboardingLandingProps {
   onStartOnboarding: () => void;
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function OnboardingLanding({ onStartOnboarding, onNavigate }: OnboardingLandingProps) {

@@ -35,7 +35,7 @@ import {
 } from 'lucide-react';
 
 interface TeacherCalendarProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface CalendarEvent {
@@ -51,7 +51,7 @@ interface CalendarEvent {
   subject?: string;
   class?: string;
   priority: 'high' | 'medium' | 'low';
-  recurring?: 'none' | 'daily' | 'weekly' | 'monthly';
+  recurring?: 'none' | 'daily' | 'weekly' | 'monthly' | 'yearly';
   reminders?: number[]; // minutes before event
   status: 'scheduled' | 'ongoing' | 'completed' | 'cancelled';
   isAllDay?: boolean;

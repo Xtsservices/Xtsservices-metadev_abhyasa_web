@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 
 interface MobileStudentAssignmentsProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function MobileStudentAssignments({ onNavigate }: MobileStudentAssignmentsProps) {

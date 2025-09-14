@@ -30,7 +30,7 @@ import {
 import { toast } from "sonner";
 
 interface StudentsManagementProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface Student {

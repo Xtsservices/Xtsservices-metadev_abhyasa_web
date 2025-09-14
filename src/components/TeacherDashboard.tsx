@@ -8,7 +8,7 @@ import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, Cart
 import { BookOpen, Users, Calendar, Clock, CheckCircle, AlertCircle, FileText, MessageSquare } from 'lucide-react';
 
 interface TeacherDashboardProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function TeacherDashboard({ onNavigate }: TeacherDashboardProps) {

@@ -28,7 +28,7 @@ import {
 } from 'lucide-react';
 
 interface TeacherScheduleSummaryProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function TeacherScheduleSummary({ onNavigate }: TeacherScheduleSummaryProps) {

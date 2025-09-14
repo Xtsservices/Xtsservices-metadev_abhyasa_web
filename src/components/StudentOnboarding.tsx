@@ -39,7 +39,7 @@ import {
 import { toast } from "sonner";
 
 interface StudentOnboardingProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function StudentOnboarding({ onNavigate }: StudentOnboardingProps) {

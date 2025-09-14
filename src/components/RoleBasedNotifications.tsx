@@ -27,7 +27,7 @@ import {
 import { toast } from "sonner";
 
 interface RoleBasedNotificationsProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
   userRole: 'super_admin' | 'institution_admin' | 'teacher' | 'student' | 'parent';
 }
 

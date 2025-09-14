@@ -31,9 +31,10 @@ interface MobileDrawerProps {
   userEmail: string;
   institutionName: string;
   currentScreen: string;
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: Screen) => void;
   onLogout: () => void;
 }
+import type { Screen } from '../App';
 
 export function MobileDrawer({
   isOpen,
@@ -123,7 +124,7 @@ export function MobileDrawer({
   };
 
   const handleItemClick = (itemId: string) => {
-    onNavigate(itemId);
+    onNavigate(itemId as Screen);
     onClose();
   };
 

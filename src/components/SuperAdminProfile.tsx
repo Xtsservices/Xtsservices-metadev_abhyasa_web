@@ -27,7 +27,7 @@ import {
 import { toast } from "sonner";
 
 interface SuperAdminProfileProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function SuperAdminProfile({ onNavigate }: SuperAdminProfileProps) {

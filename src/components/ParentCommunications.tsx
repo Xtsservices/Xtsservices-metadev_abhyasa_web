@@ -29,7 +29,7 @@ import {
 } from 'lucide-react';
 
 interface ParentCommunicationsProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface Message {

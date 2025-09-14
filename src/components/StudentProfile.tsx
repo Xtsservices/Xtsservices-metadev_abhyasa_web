@@ -27,7 +27,7 @@ import {
 import { toast } from "sonner";
 
 interface StudentProfileProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function StudentProfile({ onNavigate }: StudentProfileProps) {

@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 
 interface StudentHomeScreenProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../../App").Screen) => void;
 }
 
 export function StudentHomeScreen({ onNavigate }: StudentHomeScreenProps) {
@@ -235,10 +235,10 @@ export function StudentHomeScreen({ onNavigate }: StudentHomeScreenProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, delay: 0.6 }}
       >
-        {[
+        {([
           { icon: BookOpen, label: 'Library', screen: 'library', color: 'bg-indigo-50 text-indigo-600' },
           { icon: Award, label: 'Certificates', screen: 'certificates', color: 'bg-emerald-50 text-emerald-600' }
-        ].map((action, index) => {
+        ] as { icon: any; label: string; screen: import("../../App").Screen; color: string }[]).map((action, index) => {
           const Icon = action.icon;
           return (
             <motion.div

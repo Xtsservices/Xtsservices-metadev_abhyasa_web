@@ -24,7 +24,7 @@ import {
 } from 'lucide-react';
 
 interface ChildrenOverviewProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface Child {

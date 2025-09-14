@@ -7,7 +7,7 @@ import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, Cart
 import { BookOpen, Calendar, Clock, Award, TrendingUp, AlertCircle, CheckCircle, Bell } from 'lucide-react';
 
 interface StudentDashboardProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 export function StudentDashboard({ onNavigate }: StudentDashboardProps) {

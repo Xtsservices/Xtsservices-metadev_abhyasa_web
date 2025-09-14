@@ -22,7 +22,7 @@ import {
 import { toast } from "sonner";
 
 interface StudentCertificatesProps {
-  onNavigate: (screen: string) => void;
+  onNavigate: (screen: import("../App").Screen) => void;
 }
 
 interface Certificate {
